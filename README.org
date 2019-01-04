@@ -1,7 +1,7 @@
 * Ordinal number for Emacs Lisp
 This package simply provides conversion to English ordinal numbers.  (ex. ~1th~, ~2nd~, ~3rd~, ~4th~... /Nth/)
 ** API
-*** Function ~ordinal-format (integer N)~
+*** Function ~string ordinal-format (integer N)~
 Return string with an English ordinal appended to an integer ~N~.
 #+BEGIN_SRC emacs-lisp
 (ordinal-format 0) ; => "0th" but, it's not strictly correct English
@@ -21,3 +21,14 @@ When this variable is non-~NIL~, ~0th~ is not allowed.
 ;; => Assertion failed: (>= n 1)
 #+END_SRC
 This variable works with dynamic scope.  Do not use ~setq~ for ~ordinal-number-accept-0~.
+*** Function ~string ordinal-suffix (integer N)~
+This is a function to convert the number suffix.  Please be careful that it will not check the lower limit.
+#+BEGIN_SRC emacs-lisp
+(ordinal-suffix 1)  ; => "st"
+(ordinal-suffix 2)  ; => "nd"
+(ordinal-suffix 3)  ; => "rd"
+(ordinal-suffix 4)  ; => "th"
+(ordinal-suffix 0)  ; => "th"
+(ordinal-suffix -1) ; => "th"
+#+END_SRC
+That is, ~(ordinal-suffix -1)~ is a valid expression.
