@@ -51,6 +51,7 @@
 
 (defun ordinal-suffix (n)
   "Return suffix string of `N' in English."
+  (cl-check-type n integer)
   (let ((last-1-digit (% n 10))
         (last-2-digit (% n 100)))
     (if (memq last-2-digit '(11 12 13))
@@ -63,7 +64,6 @@
 
 NOTE: \"0th\" is not a strictly correct English expression.
 But Lisp's function `n-th' is 0 origin."
-  (cl-check-type n integer)
   ;; This is optimizable, but it is described redundantly due to the visibility of assertion error.
   (if ordinal-number-accept-0
       (cl-assert (>= n 0))
