@@ -1,5 +1,5 @@
 * Ordinal number for Emacs Lisp
-This package simply provides conversion to English ordinal numbers.  (ex. ~1th~, ~2nd~, ~3rd~, ~4th~... /Nth/)
+This package simply provides conversion to English ordinal numbers.  (ex. ~1st~, ~2nd~, ~3rd~, ~4th~... /Nth/)
 ** API
 *** Function ~string ordinal-format (integer N)~
 Return string with an English ordinal appended to an integer ~N~.
