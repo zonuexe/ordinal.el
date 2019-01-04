@@ -1,0 +1,23 @@
+* Ordinal number for Emacs Lisp
+This package simply provides conversion to English ordinal numbers.  (ex. ~1th~, ~2nd~, ~3rd~, ~4th~... /Nth/)
+** API
+*** Function ~ordinal-format (integer N)~
+Return string with an English ordinal appended to an integer ~N~.
+#+BEGIN_SRC emacs-lisp
+(ordinal-format 0) ; => "0th" but, it's not strictly correct English
+(ordinal-format 1) ; => "1st"
+(ordinal-format 2) ; => "2nd"
+(ordinal-format 3) ; => "3rd"
+(ordinal-format 4) ; => "4th"
+
+(ordinal-format -1)
+;; => Assertion failed: (>= n 0)
+#+END_SRC
+*** Variable ~boolean ordinal-number-accept-0~ (default: ~T~)
+When this variable is non-~NIL~, ~0th~ is not allowed.
+#+BEGIN_SRC emacs-lisp
+(let ((ordinal-number-accept-0 nil))
+  (ordinal-format 0))
+;; => Assertion failed: (>= n 1)
+#+END_SRC
+This variable works with dynamic scope.  Do not use ~setq~ for ~ordinal-number-accept-0~.
