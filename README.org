@@ -1,4 +1,8 @@
 * Ordinal number for Emacs Lisp
+#+BEGIN_HTML
+<a href="https://melpa.org/#/ordinal"><img alt="MELPA: ordinal" src="https://melpa.org/packages/ordinal-badge.svg"></a>
+<a href="https://stable.melpa.org/#/ordinal"><img alt="MELPA stable: ordinal" src="https://stable.melpa.org/packages/ordinal-badge.svg"></a>
+#+END_HTML
 This package simply provides conversion to English ordinal numbers.  (ex. ~1st~, ~2nd~, ~3rd~, ~4th~... /Nth/)
 ** API
 *** Function ~string ordinal-format (integer N)~
