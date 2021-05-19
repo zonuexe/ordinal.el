@@ -42,7 +42,8 @@
 ;; This variable works with dynamic scope.  Do not use `setq' for `ordinal-number-accept-0'.
 
 ;;; Code:
-(require 'cl-lib)
+(eval-when-compile
+  (require 'cl-lib))
 
 (defvar ordinal-number-accept-0 t
   "If this variable is not NIL, it will not accept 0 for ordinal numbers.")
