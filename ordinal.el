@@ -5,7 +5,7 @@
 ;; Author: USAMI Kenta <tadsan@zonu.me>
 ;; Created: 4 Jan 2019
 ;; Version: 0.0.1
-;; Package-Requires: ((emacs "24") (cl-lib "0.5"))
+;; Package-Requires: ((emacs "24.3"))
 ;; Keywords: lisp
 ;; Homepage: https://github.com/zonuexe/ordinal.el
 ;; License: GPL-3.0-or-later
