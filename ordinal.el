@@ -1,10 +1,10 @@
 ;;; ordinal.el --- Convert number to ordinal number notation  -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2019  USAMI Kenta
+;; Copyright (C) 2021  USAMI Kenta
 
 ;; Author: USAMI Kenta <tadsan@zonu.me>
 ;; Created: 4 Jan 2019
-;; Version: 0.0.1
+;; Version: 1.0.0
 ;; Package-Requires: ((emacs "24.3"))
 ;; Keywords: lisp
 ;; Homepage: https://github.com/zonuexe/ordinal.el
